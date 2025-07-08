@@ -115,5 +115,4 @@ docs/_build/
 .mypy_cache/
 .dmypy.json
 dmypy.json
-package-lock.json
-package.json
+
