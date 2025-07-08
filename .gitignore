@@ -1,0 +1,119 @@
+# Ignore environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore node_modules directory
+/node_modules
+/Frontend/node_modules
+
+# Ignore build artifacts
+/build
+/dist
+/Frontend/build
+
+# Ignore logs
+*.log
+logs
+npm-debug.log*
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignore Django migrations
+**/migrations/
+
+# Ignore virtual environment
+venv/
+.venv/
+
+# Ignore static files
+staticfiles/
+media/
+
+# Ignore testing
+/Frontend/coverage
+
+# Ignore unnecessary backend files
+# Ignore compiled Python files
+*.pyc
+
+# Ignore local settings
+local_settings.py
+
+# Ignore backup files
+*.bak
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Ignore cache files
+*.cache
+.cache/
+__pycache__/
+
+# Ignore secret keys
+secret_key.txt
+
+# Ignore database dumps
+*.sql
+*.dump
+
+# Ignore runtime files
+*.pid
+*.seed
+*.pid.lock
+
+# Ignore coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+coverage/
+*.cover
+*.lcov
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Ignore celery beat schedule file
+celerybeat-schedule
+
+# Ignore translations
+*.mo
+*.pot
+
+# Ignore Sphinx documentation
+docs/_build/
+
+# Ignore pyenv
+.python-version
+
+# Ignore mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+package-lock.json
+package.json

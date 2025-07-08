@@ -1,0 +1,232 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px;
+  width: 162%;
+  max-width: 2160px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.graph-display,
+.data-input,
+.editable-table-container,
+.analysis-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+  margin-bottom:5px;
+}
+
+.graph-display {
+  border: 2px solid #ff9800;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-container {
+  width: 100%;
+  max-width: 800px; /* Set a maximum width for the chart */
+  height: 400px; /* Set a fixed height for the chart */
+  position: relative; /* Required for Chart.js to calculate dimensions */
+}
+
+.data-input h3,
+.graph-display h3,
+.analysis-results h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.analysis-results p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.xy-input {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.xy-input input {
+  width: 100px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+button,
+.plus-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+button:hover,
+.plus-button:hover {
+  background-color: #0056b3;
+}
+
+.editable-table {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  /*overflow: hidden; /* Prevent content from overflowing the table container */
+}
+
+
+.editable-table table {
+  width: 100%; /* Make the table take up the full width of its container */
+  border-collapse: collapse;
+  table-layout: fixed; /* Allow columns to adjust dynamically based on content */
+}
+
+.editable-table thead th {
+  position: sticky; /* Keep the header fixed */
+  top: -1px;
+  background-color: #f9f9f9;
+  z-index: 1;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.editable-table tbody {
+  overflow-y: auto; /* Enable vertical scrolling for the table body */
+  max-height: 300px; /* Limit the height of the table body */
+}
+
+.editable-table th,
+.editable-table td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+}
+
+.variable{
+  width: 100px;
+}
+
+.action{
+  width: 200px;
+}
+
+.center{
+  text-align: center;
+}
+
+.editable-table input {
+  width: 40%; /* Ensure input fields fit within the column */
+  padding: 4px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.editable-table button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 3.5px 10px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.editable-table button:hover {
+  background-color: #b30000;
+}
+
+.table-container {
+  max-height: 300px; /* Limit the height of the table */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.toggle-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.radio-group input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.radio-group input[type="radio"]:checked {
+  background-color: #007bff;
+  border-color: #0056b3;
+}
+
+.radio-group input[type="radio"]:hover {
+  border-color: #0056b3;
+}
+
+.radio-group label span {
+  margin-left: 5px;
+}
