@@ -12,7 +12,7 @@ Run:
 
 in root directory
 
-    Add -d flag to run in detached mode to not block terminal (Remember to stop the running container later with docker-compose down !!)
+Add -d flag to run in detached mode to not block terminal (Remember to stop the running container later with docker-compose down !!)
 
 The docker-compose.yml configuration / script file will create two docker images (like a blueprint or file), one for frontend and one for backend.
 It will then create a docker container (like a running instance) from the 2 images.
