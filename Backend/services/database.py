@@ -1,4 +1,4 @@
-from config import connection_pool
+from services.config import connection_pool
 
 def fetch_x():
     try:

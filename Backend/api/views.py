@@ -1,9 +1,9 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
-from config import connection_pool
-from database import fetch_x, fetch_y
-from app import best_fit, quadInterpolation, mean, median, mode
+from services.config import connection_pool
+from services.database import fetch_x, fetch_y
+from services.analysis import best_fit, quadInterpolation, mean, median, mode
 
 if not connection_pool:
     raise RuntimeError("Database connection pool is not initialized. Check your database configuration.")
@@ -17,9 +17,9 @@ def get_analysis(request):
             y_values = [y[0] for y in fetch_y()]
             
             # Call the database functions
-            mean_values = mean(x_values, y_values)
-            median_values = median(x_values, y_values)
-            mode_values = mode(x_values, y_values)
+            x_mean, y_mean = mean(x_values, y_values)
+            x_median, y_median = median(x_values, y_values)
+            x_mode, y_mode = mode(x_values, y_values)
             
             # Calculate best fit line
             m, b = best_fit(x_values, y_values)
@@ -29,9 +29,9 @@ def get_analysis(request):
 
             # Prepare the response
             response_data = {
-                "mean": {"x": mean_values[0], "y": mean_values[1]},
-                "median": {"x": median_values[0], "y": median_values[1]},
-                "mode": {"x": mode_values[0], "y": mode_values[1]} if mode_values else "No mode",
+                "mean": {"x": x_mean, "y": y_mean},
+                "median": {"x": x_median, "y": y_median},
+                "mode": {"x": x_mode, "y": y_mode},
                 "bestFit": {"slope": m, "intercept": b},  # Include best fit line equation
                 "interpolation": [{"x": x, "y": y} for x, y in interpolated_points],
                 "x_values": x_values,

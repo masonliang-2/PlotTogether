@@ -4,7 +4,7 @@ import sys
 
 if __name__ == "__main__":
     #Set the Django settings module
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "stormforge.settings")
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "plottogether.settings")
     
     #Attempt to import Django
     try:

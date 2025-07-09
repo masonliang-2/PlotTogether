@@ -1,9 +1,12 @@
-# Backend architecture
+# Django Backend architecture
 
 [manage.py]  
      |
      v
-[stormforge/settings.py] --> [api/apps.py]
+[plottogether/settings.py] --> [api/apps.py]
      |
      v
-[stormforge/urls.py] --> [api/views.py]
+[plottogether/urls.py] --> [api/urls.py] -> [api/views.py]
+                                                  |
+                                                  v
+[services/config.py] <- [services/database.py]  <- [services/analysis.py]

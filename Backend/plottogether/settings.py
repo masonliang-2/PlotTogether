@@ -24,8 +24,8 @@ DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'     #DEBUG: Shows errors i
 #ALLOWED_HOSTS: What domains/IP's are allowed to access the server
 ALLOWED_HOSTS = [       
     'localhost', '127.0.0.1', '[::1]',
-    'stormforge-web-774393089590.us-west1.run.app',
-    'stormforge-frontend-774393089590.us-west1.run.app',
+    'plottogether-web-774393089590.us-west1.run.app',
+    'plottogether-frontend-774393089590.us-west1.run.app',
     ]
 
 
@@ -56,11 +56,11 @@ MIDDLEWARE = [
     
 ]
 
-#Tells Django which file defines URL routes (stormforge/urls.py)
-ROOT_URLCONF = 'stormforge.urls'
+#Tells Django which file defines URL routes (plottogether/urls.py)
+ROOT_URLCONF = 'plottogether.urls'
 
-#Tells Django which file to use as WSGI for deployment (stormforge/wsgi.py)
-WSGI_APPLICATION = 'stormforge.wsgi.application'
+#Tells Django which file to use as WSGI for deployment (plottogether/wsgi.py)
+WSGI_APPLICATION = 'plottogether.wsgi.application'
 
 #Tells Django how to load HTML templates using render()
     #Ie. controls which (like global) variables are available by default to every template (like HTML files)
@@ -137,8 +137,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #CORS_ALLOWED_ORIGINS: What frontend URL's can talk to your API
 #CORS_ALLOWED_ORIGINS = [
 #    "http://localhost:3000",
-#    'http://stormforge-web-774393089590.us-west1.run.app',
-#    'http://stormforge-frontend-774393089590.us-west1.run.app',
+#    'http://plottogether-web-774393089590.us-west1.run.app',
+#    'http://plottogether-frontend-774393089590.us-west1.run.app',
 #]
 
 # Optionally, allow all origins (for development purposes only)
